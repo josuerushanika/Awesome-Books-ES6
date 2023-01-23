@@ -29,11 +29,6 @@ const showContact = () => {
   addbookBtn.classList.remove('active-btn');
   listBtn.classList.remove('active-btn');
 };
-// contactBtn.addEventListener('click', showContact);
-// listBtn.addEventListener('click', listbookShow);
-// addbookBtn.addEventListener('click', addNewBookShow);
-
-// export default navLink;
 
 export {
   listbookShow, addNewBookShow, showContact, listBtn, addbookBtn, contactBtn,
