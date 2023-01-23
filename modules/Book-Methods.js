@@ -2,15 +2,14 @@ const book = JSON.parse(localStorage.getItem('our-books')) || [];
 
 const inputTitle = document.querySelector('#texttitle');
 const inputAuthor = document.querySelector('#txtauthor');
-const myButton = document.querySelector('.btn-list');
 const list = document.getElementById('book-list');
 const books = document.querySelector('.books');
 const time = document.querySelector('.time');
 
-class Books {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
+export class Books {
+  constructor() {
+    // this.title = title;
+    // this.author = author;
   }
 
   static disp() {
@@ -20,6 +19,7 @@ class Books {
     }
     list.innerHTML = '';
     let i = -1;
+    console.log(book);
     book.forEach((item) => {
       const tr = document.createElement('tr');
       tr.setAttribute('class', 'book-row');
@@ -44,7 +44,7 @@ class Books {
   static addBook(e) {
     if (inputTitle.value && inputAuthor.value !== '') {
       e.preventDefault();
-      const bookData = new Books(inputTitle.value, inputAuthor.value);
+      const bookData = {title:inputTitle.value, author:inputAuthor.value};
       book.push(bookData);
       localStorage.setItem('our-books', JSON.stringify(book));
       Books.disp();
@@ -53,6 +53,5 @@ class Books {
   }
 }
 
-myButton.addEventListener('click', Books.addBook);
-
 Books.disp();
+
