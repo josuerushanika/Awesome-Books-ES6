@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-#### <a href="">[Live Demo Link](https://josuerushanika.github.io/awesomeBook/)</a>
+#### <a href="">[Live Demo Link](https://josuerushanika.github.io/Awesome-Books-ES6/)</a>
 
 
 
@@ -81,7 +81,7 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  git clone https://github.com/josuerushanika/awesomeBook.git
+  git clone https://github.com/josuerushanika/Awesome-Books-ES6.git
 ```
 
 
