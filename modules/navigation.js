@@ -5,7 +5,7 @@ const listBtn = document.getElementById('books-lists');
 const addbookBtn = document.getElementById('addNewbook');
 const contactBtn = document.getElementById('contact');
 // Single page App functions
- const listbookShow = () => {
+const listbookShow = () => {
   sec1.classList.remove('no-display');
   sec2.classList.add('no-display');
   sec3.classList.add('no-display');
@@ -35,4 +35,6 @@ const showContact = () => {
 
 // export default navLink;
 
-export {listbookShow,addNewBookShow,showContact,listBtn,addbookBtn,contactBtn};
+export {
+  listbookShow, addNewBookShow, showContact, listBtn, addbookBtn, contactBtn,
+};

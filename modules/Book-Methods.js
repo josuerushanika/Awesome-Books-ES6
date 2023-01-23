@@ -3,15 +3,8 @@ const book = JSON.parse(localStorage.getItem('our-books')) || [];
 const inputTitle = document.querySelector('#texttitle');
 const inputAuthor = document.querySelector('#txtauthor');
 const list = document.getElementById('book-list');
-const books = document.querySelector('.books');
-const time = document.querySelector('.time');
 
-export class Books {
-  constructor() {
-    // this.title = title;
-    // this.author = author;
-  }
-
+export default class Books {
   static disp() {
     if (book.length === 0) {
       list.innerText = 'No Books To Display';
@@ -19,7 +12,7 @@ export class Books {
     }
     list.innerHTML = '';
     let i = -1;
-    console.log(book);
+
     book.forEach((item) => {
       const tr = document.createElement('tr');
       tr.setAttribute('class', 'book-row');
@@ -44,7 +37,7 @@ export class Books {
   static addBook(e) {
     if (inputTitle.value && inputAuthor.value !== '') {
       e.preventDefault();
-      const bookData = {title:inputTitle.value, author:inputAuthor.value};
+      const bookData = { title: inputTitle.value, author: inputAuthor.value };
       book.push(bookData);
       localStorage.setItem('our-books', JSON.stringify(book));
       Books.disp();
@@ -54,4 +47,3 @@ export class Books {
 }
 
 Books.disp();
-
